@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:demo_app/login.dart';
-import 'package:demo_app/sizeConfig.dart';
+import 'package:demo_app/views/pages/login.dart';
+import 'package:demo_app/utils/shared/sizeConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,4 @@
-import 'dart:async';
-
-import 'package:demo_app/search.dart';
-import 'package:demo_app/sizeConfig.dart';
-import 'package:demo_app/splash.dart';
+import 'package:demo_app/views/pages/splash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Splash(),
     );
   }

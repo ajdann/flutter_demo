@@ -1,5 +1,5 @@
 import 'package:demo_app/example_webview.dart';
-import 'package:demo_app/sizeConfig.dart';
+import 'package:demo_app/utils/shared/sizeConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
