@@ -1,5 +1,5 @@
 import 'package:demo_app/interface/signInInterface.dart';
-import 'package:demo_app/utils/loginVariables/loginVariables.dart';
+import 'package:demo_app/utils/variables/loginVariables.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import "package:http/http.dart" as http;
 import 'dart:convert' show json;

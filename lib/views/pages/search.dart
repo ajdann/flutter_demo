@@ -1,9 +1,9 @@
 import 'package:demo_app/example_webview.dart';
 import 'package:demo_app/utils/shared/sizeConfig.dart';
+import 'package:demo_app/utils/variables/searchVariables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 class SearchScreen extends StatefulWidget {
   @override
   _SearchScreenState createState() => _SearchScreenState();
@@ -22,22 +22,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _textController = TextEditingController();
     var _shortestSide = MediaQuery.of(context).size.shortestSide;
 
-   void searchGoogle(src) async => {
-
-
-    await launch(Uri(
-    scheme: 'http',
-    path: 'www.google.ba/search',
-    queryParameters: {
-      'q' : src
-    }
-  ).toString())
-     
-
-  };
     return Scaffold(
         body: SafeArea(
       child: Stack(
@@ -72,7 +58,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     width: SizeConfig.blockSizeHorizontal * 80,
                     height: SizeConfig.blockSizeVertical * 10,
                     child: TextField(
-                      controller: _textController,
+                      controller: textController,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Search',
@@ -80,7 +66,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             child: Icon(Icons.search,
                                 size: 40, color: Colors.grey[700]),
                             onTap: () => Navigator.push(
-        context, CupertinoPageRoute(builder: (context) => WebViewExample(_textController.text))),
+        context, CupertinoPageRoute(builder: (context) => WebViewExample(textController.text))),
                           )),
                     ))
               ],

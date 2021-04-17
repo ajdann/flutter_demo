@@ -1,29 +1,18 @@
-import 'dart:async';
-
-import 'package:demo_app/views/pages/login.dart';
+import 'package:demo_app/utils/variables/splashVariables.dart';
+import 'package:demo_app/viewModel/splashViewModel.dart';
 import 'package:demo_app/utils/shared/sizeConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
-  void handleTimeout(BuildContext context) {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (ctxt) => Login()));
-  }
-  static const timeout = Duration(seconds: 3);
-  static const ms = Duration(milliseconds: 1);
-
+ 
 
   @override
   Widget build(BuildContext context) {
     
     SizeConfig().init(context);
-    Timer startTimeout(int milliseconds) {
-    var duration = milliseconds == null ? timeout : ms * milliseconds;
-    return Timer(duration, () => handleTimeout(context));
-    
-  }
-    startTimeout(3000);
+   
+    startTimeout(3000, context, timeout, ms);
 
     return Scaffold(
      

@@ -1,4 +1,4 @@
-import 'package:demo_app/utils/loginVariables/loginVariables.dart';
+import 'package:demo_app/utils/variables/loginVariables.dart';
 import 'package:demo_app/views/widgets/SignInCard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
